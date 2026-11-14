@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #c77dbb; font-style: italic;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+README.md</font>
+</center></td></tr></table>
+<pre><span class="s0"># </span><span class="s1">Jelly AI — Version 0.1</span>
+
+<span class="s1">A first JavaFX desktop companion prototype for Windows.</span>
+
+<span class="s0">## </span><span class="s1">Included in this version</span>
+<span class="s0">- </span><span class="s1">A small pixel-art jelly that floats above other windows.</span>
+<span class="s0">- </span><span class="s1">Click the jelly to open the Jelly AI dashboard.</span>
+<span class="s0">- </span><span class="s1">Drag the jelly around the desktop.</span>
+<span class="s0">- </span><span class="s1">A squash-and-stretch landing animation after dragging.</span>
+<span class="s0">- </span><span class="s1">Local notes stored in a SQLite database.</span>
+
+<span class="s0">## </span><span class="s1">Not included yet</span>
+<span class="s0">- </span><span class="s1">Cloud AI responses.</span>
+<span class="s0">- </span><span class="s1">Screen capture or OCR.</span>
+<span class="s0">- </span><span class="s1">Automatic context extraction.</span>
+<span class="s0">- </span><span class="s1">Proactive reminders.</span>
+
+<span class="s1">These are planned next steps. Screen capture should be opt-in and visibly enabled.</span>
+
+<span class="s0">## </span><span class="s1">Requirements</span>
+<span class="s0">- </span><span class="s1">JDK 26</span>
+<span class="s0">- </span><span class="s1">IntelliJ IDEA</span>
+<span class="s0">- </span><span class="s1">Maven support in IntelliJ</span>
+<span class="s0">- </span><span class="s1">Internet connection the first time Maven downloads dependencies</span>
+
+<span class="s0">## </span><span class="s1">Open in IntelliJ</span>
+<span class="s0">1. </span><span class="s1">Extract the `JellyAI` folder.</span>
+<span class="s0">2. </span><span class="s1">In IntelliJ, choose **File → Open** and select the folder containing `pom.xml`.</span>
+<span class="s0">3. </span><span class="s1">Allow IntelliJ to load the Maven project.</span>
+<span class="s0">4. </span><span class="s1">Make sure Project SDK is set to JDK 26.</span>
+<span class="s0">5. </span><span class="s1">Open the Maven tool window, then run **Plugins → javafx → javafx:run**.</span>
+
+<span class="s1">You can also open the IntelliJ terminal in the project folder and run:</span>
+
+<span class="s0">```</span><span class="s2">bash</span>
+<span class="s3">mvn clean javafx:run</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span><span class="s1">Local memory location</span>
+<span class="s1">The SQLite database is stored at:</span>
+
+<span class="s1">`%LOCALAPPDATA%\\JellyAI\\jelly-memory.db`</span>
+
+<span class="s1">On Windows, paste `%LOCALAPPDATA%\\JellyAI` into File Explorer's address bar.</span>
+
+<span class="s0">## </span><span class="s1">Project structure</span>
+
+<span class="s0">```</span><span class="s2">text</span>
+<span class="s3">JellyAI/</span>
+<span class="s3">├── pom.xml</span>
+<span class="s3">├── README.md</span>
+<span class="s3">└── src/</span>
+    <span class="s3">└── main/</span>
+        <span class="s3">└── java/</span>
+            <span class="s3">└── com/</span>
+                <span class="s3">└── jellyai/</span>
+                    <span class="s3">├── JellyAIApp.java</span>
+                    <span class="s3">├── FloatingPetWindow.java</span>
+                    <span class="s3">├── DashboardWindow.java</span>
+                    <span class="s3">└── MemoryStore.java</span>
+<span class="s0">```</span>
+
+<span class="s0">## </span><span class="s1">Next milestone: cloud AI</span>
+<span class="s1">The next version will add a `CloudAIService` class. Keep any AI API key outside source code, preferably in a Windows environment variable. Never commit API keys to Git or place them in a public project.</span>
+</pre>
+</body>
+</html>
